@@ -40,8 +40,25 @@ const styles = {
         justifyContent: 'start',
         padding: '4px',
     }),
-    col2_desktop: style({
+    con1_title_desktop: style({
+        paddingLeft: '8px',
         filter: 'drop-shadow(7px 7px 4px #555)',
+        $nest: {
+            '@media only screen and (max-width: 767px)': {
+                display: 'none',
+            },
+        },
+    }),
+    con1_title_mobile: style({
+        paddingLeft: '8px',
+        filter: 'drop-shadow(3px 3px 2px #555)',
+        $nest: {
+            '@media only screen and (min-width: 768px)': {
+                display: 'none',
+            },
+        },
+    }),
+    col2_desktop: style({
         width: '60%',
         $nest: {
             '@media only screen and (max-width: 767px)': {
