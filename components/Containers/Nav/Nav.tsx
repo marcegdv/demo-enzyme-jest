@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './Nav.styles';
 import Paragraph from '../../Text/Paragraph';
 
@@ -12,7 +13,7 @@ const Nav = (props: NavProps) => {
                 <div className={styles.main}>
                     <div className={styles.col1}>
                         <div className={styles.logo}>
-                            Logo
+                            Demo
                         </div>
                         {props.title &&
                             <div className={styles.con1_title_desktop}>

@@ -2,10 +2,6 @@ import React from 'react';
 import styles from './Footer.styles';
 import Paragraph from '../../Text/Paragraph';
 
-export type Footer1Props = {
-    children?: React.ReactNode;
-}
-
 const Footer = () => {
     return (
         <footer className={styles.footer}>
