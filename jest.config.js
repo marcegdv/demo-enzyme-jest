@@ -6,7 +6,6 @@ module.exports = {
     transform: {
         '^.+\\.(tsx|ts)?$': 'ts-jest',
         '^.+\\.js$': 'babel-jest',
-        '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform',
     },
     testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx|ts)?$',
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
@@ -22,5 +21,4 @@ module.exports = {
             tsConfig: '<rootDir>/tsconfig.jest.json',
         },
     },
-    testResultsProcessor: 'jest-sonar-reporter',
 };
