@@ -16,7 +16,7 @@ export const colors: ColorsType = {
     inactive: '#cccccc',
     light: '#eeeeee',
     normal: '#000000',
-    primary: '#3366ff',
+    primary: '#3366ee',
     safe: '#22aa55',
     secondary: '#789abc',
     warning: '#eeaa00',
@@ -33,7 +33,7 @@ colorsMap.set('safe', colors.safe);
 colorsMap.set('secondary', colors.secondary);
 colorsMap.set('warning', colors.warning);
 
-const getColor = (color: string): string => {
+const getColor = (color: string = ''): string => {
     let finalColor: string;
     if (!color) { finalColor = colorsMap.get('normal'); }
     else {
