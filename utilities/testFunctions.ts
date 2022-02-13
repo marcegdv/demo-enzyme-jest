@@ -6,7 +6,6 @@ export const setWindowInnerWidth = (width: number = 767) => {
     });
 };
 export const setGlobalInnerWidth = (width: number = 767) => {
-    //global.innerWidth = 767;
     Object.defineProperty(global, 'innerWidth', {
         writable: true,
         configurable: true,

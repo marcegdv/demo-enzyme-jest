@@ -18,14 +18,14 @@ export const secondPadding = (date: Date): string => {
     return date.getSeconds().toString().padStart(2, '0');
 };
 
-export const formatDate = (date: Date, separator: string = '/'): string => {
+export const formatDate = (date: Date, separator: string = '-'): string => {
     let response: string = date.getFullYear() + separator;
     response += monthPadding(date) + separator;
     response += datePadding(date);
     return response;
 };
 
-export const formatDateDMY = (date: Date, separator: string = '/'): string => {
+export const formatDateDMY = (date: Date, separator: string = '-'): string => {
     let response: string = datePadding(date) + separator;
     response += monthPadding(date) + separator;
     response += date.getFullYear();
@@ -45,12 +45,20 @@ export const formatTimeHHMM = (date: Date, separator: string = ':'): string => {
     return response;
 };
 
-export const formatDateTime = (date: Date): string => {
-    return formatDate(date) + ' ' + formatTime(date);
+export const formatDateTime = (
+    date: Date, separator: string = ' ',
+    dateSeparator: string = '-',
+    hourSeparator: string = ':'
+): string => {
+    return formatDate(date, dateSeparator) + separator + formatTime(date, hourSeparator);
 };
 
-export const formatDateTimeDMY = (date: Date): string => {
-    return formatDateDMY(date) + ' ' + formatTime(date);
+export const formatDateTimeDMY = (
+    date: Date, separator: string = ' ',
+    dateSeparator: string = '-',
+    hourSeparator: string = ':'
+): string => {
+    return formatDateDMY(date, dateSeparator) + separator + formatTime(date, hourSeparator);
 };
 
 export const formatDateName = (date: Date): string => {
