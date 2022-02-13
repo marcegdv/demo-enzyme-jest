@@ -21,10 +21,9 @@ describe('Home component:', () => {
         expect(component.find('Main')).toHaveLength(1);
         expect(component.find('MainCards')).toHaveLength(1);
         expect(component.find('DivButton')).toHaveLength(1);
-        expect(component.find('Paragraph')).toHaveLength(2);
+        expect(component.find('Footer')).toHaveLength(1);
         expect(component.find('Dialog')).toHaveLength(0);
         expect(component.find('DialogContent')).toHaveLength(0);
-        expect(component.find('Footer')).toHaveLength(1);
     });
     it('when click on DivButton, render Dialog', () => {
         component.find('DivButton').simulate('click');

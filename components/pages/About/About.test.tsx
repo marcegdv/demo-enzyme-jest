@@ -41,7 +41,7 @@ describe('About component', () => {
         expect(component.find('DateCard')).toHaveLength(0);
     });
     test('if click on button "Volver" go to home page', () => {
-        component.find('LinkButton').simulate('click');
+        component.find('LinkButton').dive().simulate('click');  //comentar
         expect(mockRouter).toHaveBeenCalledWith('/');
     });
 });
