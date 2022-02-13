@@ -20,6 +20,7 @@ describe('DivButton component', () => {
         expect(component).toBeTruthy();
     });
     test('on click, call function', () => {
+        component.simulate('mouseover');
         component.simulate('click');
         expect(mockOnClick).toBeCalled();
         expect(mockOnClick).toBeCalledTimes(1);

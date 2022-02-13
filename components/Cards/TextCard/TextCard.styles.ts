@@ -1,8 +1,8 @@
 import { style } from 'typestyle';
 
 export type StyleValues = {
-    width: string;
-    height: string;
+    width?: string;
+    height?: string;
 };
 
 const textCardStyles = (val: StyleValues): string => {

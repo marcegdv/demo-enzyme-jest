@@ -13,8 +13,8 @@ const buttonStyles = (val: StyleValues): string => {
     const fcolor = val.color ?? 'light';
     const bcolor = val.backgroundColor ?? 'primary';
     const isSec = val.isSecondary ?? false;
-    const widthValue = val.width ?? '100%';
-    const heightValue = val.height ?? '32px';
+    const width = val.width ?? '100%';
+    const height = val.height ?? '32px';
 
     const currentBackgroundColor = () => palette(isSec ? fcolor : bcolor);
     const currentColor = () => palette(isSec ? bcolor : fcolor);
@@ -31,8 +31,8 @@ const buttonStyles = (val: StyleValues): string => {
         fontFamily: 'Helvetica, Arial, sans-serif',
         fontSize: '16px',
         fontWeight: 'bold',
-        height: heightValue,
-        width: widthValue,
+        height: height,
+        width: width,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

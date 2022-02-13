@@ -25,6 +25,12 @@ const styles = {
             },
         },
     }),
+    main_content: style({
+        margin: '16px 0px',
+        display: 'grid',
+        gap: '32px',
+        justifyItems: 'center',
+    }),
 };
 
 export default styles;

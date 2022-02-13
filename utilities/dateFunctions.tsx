@@ -18,29 +18,29 @@ export const secondPadding = (date: Date): string => {
     return date.getSeconds().toString().padStart(2, '0');
 };
 
-export const formatDate = (date: Date): string => {
-    let response: string = date.getFullYear() + '/';
-    response += monthPadding(date) + '/';
+export const formatDate = (date: Date, separator: string = '/'): string => {
+    let response: string = date.getFullYear() + separator;
+    response += monthPadding(date) + separator;
     response += datePadding(date);
     return response;
 };
 
-export const formatDateDMY = (date: Date): string => {
-    let response: string = datePadding(date);
-    response += monthPadding(date) + '/';
-    response += date.getFullYear() + '/';
+export const formatDateDMY = (date: Date, separator: string = '/'): string => {
+    let response: string = datePadding(date) + separator;
+    response += monthPadding(date) + separator;
+    response += date.getFullYear();
     return response;
 };
 
-export const formatTime = (date: Date): string => {
-    let response: string = hourPadding(date) + ':';
-    response += minutePadding(date) + ':';
+export const formatTime = (date: Date, separator: string = ':'): string => {
+    let response: string = hourPadding(date) + separator;
+    response += minutePadding(date) + separator;
     response += secondPadding(date);
     return response;
 };
 
-export const formatTimeHHMM = (date: Date): string => {
-    let response: string = hourPadding(date) + ':';
+export const formatTimeHHMM = (date: Date, separator: string = ':'): string => {
+    let response: string = hourPadding(date) + separator;
     response += minutePadding(date);
     return response;
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import getColor from '../../Colors';
+import paragraphStyles, { StyleValues } from './Paragraph.styles';
 
 export type ParagraphProps = {
     size?: number;
@@ -10,16 +11,15 @@ export type ParagraphProps = {
 };
 
 const Paragraph = (props: ParagraphProps) => {
-    const paragraphStyles: any = {
-        fontFamily: 'Helvetica, Arial, sans-serif',
-        fontSize: `${props.size ?? 8}px`,
-        fontWeight: props.weight ?? 'normal',
-        color: getColor(props.color || ''),
-        textAlign: props.align ?? 'left',
+    const values: StyleValues = {
+        size: `${props.size ?? 8}px`,
+        weight: props.weight ?? 'normal',
+        color: getColor(props.color ?? ''),
+        align: props.align ?? 'left',
     };
 
     return (
-        <div style={paragraphStyles}>
+        <div className={paragraphStyles(values)}>
             {props.children}
         </div>
     );

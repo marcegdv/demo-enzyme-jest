@@ -10,6 +10,9 @@ const props: TextCardProps = {
 const component: ShallowWrapper = shallow(<TextCard {...props}/>);
 
 describe('TextCard component', () => {
+    it('is rendered', () => {
+        
+    });
     it('is rendered with all props', () => {
         component.setProps({width: '100px', height: '100px'}) //comentar cobertura
         expect(component).toBeTruthy();

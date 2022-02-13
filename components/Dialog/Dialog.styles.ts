@@ -41,7 +41,7 @@ const styles = {
         minWidth: 'calc(fit-content - 50px)',
         minHeight: '34px',
         height: 'fit-content',
-        paddingLeft: '4px',
+        paddingLeft: '8px',
         cursor: 'normal',
         $nest: {
             '@media screen and (max-width: 767px)': {
