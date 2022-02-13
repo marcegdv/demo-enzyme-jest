@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useRouter } from 'next/router';
 import { stringLorem } from '../../../utilities/dummyFunctions';
 import styles from './home.styles';
 
@@ -10,15 +9,10 @@ import Dialog from '../../Dialog';
 import DivButton from '../../Buttons/DivButton';
 import Paragraph from '../../Text/Paragraph';
 import TextCard from '../../Cards/TextCard';
-import UrlButton from '../../Buttons/UrlButton';
+import LinkButton from '../../Buttons/LinkButton';
 
 const HomePage = () => {
-    const router = useRouter();
     const [showDialog, setShowDialog] = useState<boolean>(false);
-
-    const handleClickContact = () => {
-        router.push('/contact');
-    };
 
     const handleSwitchShowDialog = () => {
         setShowDialog(!showDialog)
@@ -38,7 +32,7 @@ const HomePage = () => {
                     </Paragraph>
                 </TextCard>
                 <TextCard width='80%'>
-                    <Paragraph size={16} weight='bold' color={'normal'} align={'center'}>
+                    <Paragraph size={16} weight='bold' color={'light'} align={'center'}>
                         {stringLorem()}
                     </Paragraph>
                 </TextCard>
@@ -52,11 +46,11 @@ const HomePage = () => {
             <>
                 <Paragraph size={14} weight='bold' color={'secondary'}>
                     {stringLorem(4)}
-                </Paragraph>
+                </Paragraph><br />
                 <Paragraph size={14} weight='bold' color={'safe'} align='center'>
                     {stringLorem()}
-                </Paragraph>
-                <UrlButton text='Contact' onClick={handleClickContact} width='100px' height='fit-content' />
+                </Paragraph><br />
+                <LinkButton text='Acerca de' url='/about' width='100px' height='fit-content' />
             </>
         );
     };
@@ -69,12 +63,6 @@ const HomePage = () => {
                     <MainCards />
                     <DivButton text='Abrir diálogo' height='48px' onClick={handleSwitchShowDialog}
                         width='200px' color='light' backgroundColor='safe' />
-                    <Paragraph size={12} weight='bold' color={'primary'} align={'left'}>
-                        {stringLorem(2)}
-                    </Paragraph>
-                    <Paragraph size={12} weight='bold' color={'secondary'} align={'center'}>
-                        {stringLorem(1)}
-                    </Paragraph>
                 </div>
             </Main>
             <Footer />

@@ -17,7 +17,7 @@ const styles = {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        backgroundColor: 'white',
+        backgroundColor: '#777',
         padding: '16px',
         width: '640px',
         height: '480px',
@@ -66,7 +66,7 @@ const styles = {
         bottom: '80px',
         right: '16px',
         overflowY: 'auto',
-        backgroundColor: '#eee',
+        backgroundColor: '#111',
     }),
     buttons: style({
         position: 'absolute',

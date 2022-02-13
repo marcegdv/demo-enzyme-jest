@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import styles from './Contact.styles';
+import styles from './About.styles';
 import Nav from '../../Containers/Nav';
 import Main from '../../Containers/Main';
 import Footer from '../../Containers/Footer';
-import UrlButton from '../../Buttons/UrlButton';
+import LinkButton from '../../Buttons/LinkButton';
 import TextButton from '../../Buttons/TextButton';
 import Paragraph from '../../Text/Paragraph';
 import DateCard from '../../Cards/DateCard';
@@ -14,7 +14,7 @@ type DateCardState = {
     text: string,
 };
 
-const ContactPage = () => {
+const AboutPage = () => {
     const router = useRouter();
     const [card, setCard] = useState<DateCardState>({
         show: false,
@@ -28,13 +28,9 @@ const ContactPage = () => {
         });
     };
 
-    const handleClickHome = () => {
-        router.push('/');
-    };
-
     return (
         <>
-            <Nav title='Contacto' />
+            <Nav title='Acerca de' />
             <Main>
                 <div className={styles.dateCard}>
                     <TextButton onClick={handleViewDate}>
@@ -45,7 +41,7 @@ const ContactPage = () => {
                 </div>
                 {card.show && <DateCard dateTime={new Date()} />}
                 <div className={styles.backButton}>
-                    <UrlButton text='Volver' onClick={handleClickHome} />
+                    <LinkButton text='Volver' url='/' />
                 </div>
             </Main>
             <Footer />
@@ -53,4 +49,4 @@ const ContactPage = () => {
     );
 };
 
-export default ContactPage;
+export default AboutPage;

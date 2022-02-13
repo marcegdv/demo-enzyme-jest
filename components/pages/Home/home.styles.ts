@@ -3,12 +3,12 @@ import { footerHeight } from '../../Containers/Footer/Footer.styles'
 
 const styles = {
     container: style({
-        backgroundColor: '#ffffff',
+        backgroundColor: '#111',
         width: '100%',
         paddingBottom: footerHeight.desktop,
     }),
     main: style({
-        background: 'rgba(255,255,255,1)',
+        background: '#222',
         width: '100%',
         position: 'fixed',
         display: 'flex',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import Contact from '.';
+import About from '.';
 
 const mockRouter: jest.Mock<Function, Function[]> = jest.fn();
 jest.mock('next/router', () => ({
@@ -10,9 +10,9 @@ jest.mock('next/router', () => ({
         replace: mockRouter,
     }),
 }));
-const component: ShallowWrapper = shallow(<Contact />);
+const component: ShallowWrapper = shallow(<About />);
 
-describe('Contact component', () => {
+describe('About component', () => {
     it('is rendered', () => {
         expect(component).toBeTruthy;
     });
@@ -22,7 +22,7 @@ describe('Contact component', () => {
         expect(component.find('TextButton')).toHaveLength(1);
         expect(component.find('Paragraph')).toHaveLength(1);
         expect(component.find('DateCard')).toHaveLength(0);
-        expect(component.find('UrlButton')).toHaveLength(1);
+        expect(component.find('LinkButton')).toHaveLength(1);
         expect(component.find('Footer')).toHaveLength(1);
     });
     test('if click to view or hide DateCard, the text change', () => {
@@ -41,7 +41,7 @@ describe('Contact component', () => {
         expect(component.find('DateCard')).toHaveLength(0);
     });
     test('if click on button "Volver" go to home page', () => {
-        component.find('UrlButton').simulate('click');
+        component.find('LinkButton').simulate('click');
         expect(mockRouter).toHaveBeenCalledWith('/');
     });
 });

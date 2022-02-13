@@ -2,7 +2,7 @@ import React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import Home from '.';
 
-const mockRouter: jest.Mock<Function, Function[]> = jest.fn();
+const mockRouter: jest.Mock = jest.fn();
 jest.mock('next/router', () => ({
     ...(jest.requireActual('next/router') as any),
     useRouter: () => ({
@@ -10,10 +10,6 @@ jest.mock('next/router', () => ({
         replace: mockRouter,
     }),
 }));
-
-const openDialog = (component: ShallowWrapper | ReactWrapper) => {
-    component.find('DivButton').simulate('click');
-};
 
 describe('Home component:', () => {
     const component: ShallowWrapper = shallow(<Home />);
@@ -31,7 +27,7 @@ describe('Home component:', () => {
         expect(component.find('Footer')).toHaveLength(1);
     });
     it('when click on DivButton, render Dialog', () => {
-        openDialog(component);
+        component.find('DivButton').simulate('click');
         expect(component.find('Dialog')).toHaveLength(1);
         expect(component.find('DialogContent')).toHaveLength(1);
     });
@@ -39,14 +35,15 @@ describe('Home component:', () => {
 
 describe('When dialog is open:', () => {
     const component: ReactWrapper = mount(<Home />);
-    openDialog(component);
+    component.find('DivButton').simulate('click');
     const content: ReactWrapper = component.find('DialogContent');
     it('content is rendered', () => {
         expect(content.find('Paragraph')).toHaveLength(2);
-        expect(content.find('UrlButton')).toHaveLength(1);
+        expect(content.find('LinkButton')).toHaveLength(1);
     });
     test('when click on UrlButton, go to /contact', () => {
-        content.find('UrlButton').simulate('click');
-        expect(mockRouter).toHaveBeenCalledWith('/contact');
+        mockRouter.mockReset();
+        content.find('LinkButton').simulate('click');
+        expect(mockRouter).toHaveBeenCalledWith('/about');
     });
 });
