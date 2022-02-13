@@ -8,7 +8,7 @@ const styles = {
         paddingBottom: footerHeight.desktop,
     }),
     main: style({
-        background: 'radial-gradient(ellipse closest-side, rgba(255,255,255,1) 50%, rgba(231,231,255,1) 100%)',
+        background: 'rgba(255,255,255,1)',
         width: '100%',
         position: 'fixed',
         display: 'flex',

@@ -4,24 +4,14 @@ import { NextRouter, useRouter } from "next/router";
 
 export type UrlButtonProps = {
     text: string,
-    url: string,
+    onClick: Function,
     width?: string,
     height?: string,
-    replace?: boolean,
-}
+};
 
 const UrlButton = (props: UrlButtonProps) => {
-    const router: NextRouter = useRouter();
-
-    const handleMouseClick = () => {
-        if (props.replace) {
-            router.replace(props.url);
-        }
-        router.push(props.url);
-    }
-
     return (
-        <div className={styles.default} onClick={handleMouseClick}
+        <div className={styles.default} onClick={() => props.onClick()}
             style={{width: props.width, height: props.height}}
         >
             {props.text}

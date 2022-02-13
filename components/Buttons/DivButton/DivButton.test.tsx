@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import DivButton, { DivButtonProps } from './Button';
+import DivButton, { DivButtonProps } from './DivButton';
 
 //comentar
 const mockOnClick = jest.fn();
@@ -12,7 +12,7 @@ const props: DivButtonProps = {
 
 const component: ShallowWrapper = shallow(<DivButton {...props}/>);
 
-describe('Button component', () => {
+describe('DivButton component', () => {
     beforeEach(() => {
         mockOnClick.mockReset();
     });

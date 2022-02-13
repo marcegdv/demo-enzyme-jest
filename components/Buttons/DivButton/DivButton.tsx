@@ -1,5 +1,5 @@
 import React from 'react';
-import buttonStyles, { StyleValues } from './Button.styles';
+import buttonStyles, { StyleValues } from './DivButton.styles';
 
 export type DivButtonProps = {
     text: string,

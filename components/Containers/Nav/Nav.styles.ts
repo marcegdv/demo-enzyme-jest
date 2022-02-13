@@ -34,7 +34,7 @@ const styles = {
         justifyContent: 'center',
     }),
     col1: style({
-        width: '40%',
+        width: '50%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'start',
@@ -59,7 +59,7 @@ const styles = {
         },
     }),
     col2_desktop: style({
-        width: '60%',
+        width: '50%',
         $nest: {
             '@media only screen and (max-width: 767px)': {
                 display: 'none',

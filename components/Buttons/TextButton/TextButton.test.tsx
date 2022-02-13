@@ -11,9 +11,6 @@ const props: TextButtonProps = {
 const component: ShallowWrapper = shallow(<TextButton {...props}/>);
 
 describe('TextButton component', () => {
-    beforeEach(() => {
-        mockOnClick.mockReset();
-    });
     it('is rendered', () => {
         expect(component).toBeTruthy();
     });

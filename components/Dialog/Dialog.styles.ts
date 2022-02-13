@@ -33,6 +33,7 @@ const styles = {
     }),
     topBar: style({
         display: 'flex',
+        borderRadius: '4px',
         alignItems: 'center',
         backgroundColor: '#eee',
         position: 'relative',
@@ -42,6 +43,19 @@ const styles = {
         height: 'fit-content',
         paddingLeft: '4px',
         cursor: 'normal',
+        $nest: {
+            '@media screen and (max-width: 767px)': {
+                width: '100%',
+                minWidth: 'fit-content',
+            },
+        },
+    }),
+    closeDialog: style({
+        $nest: {
+            '@media screen and (max-width: 767px)': {
+                display: 'none',
+            },
+        },
     }),
     content: style({
         borderRadius: '4px',

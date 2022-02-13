@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Dialog.styles';
 
-import Button from '../Buttons/Button';
+import DivButton from '../Buttons/DivButton';
 import CloseDialog from '../Buttons/CloseDialog';
 import Paragraph from '../Text/Paragraph';
 
 export type DialogProps = {
     topBar?: string,
+    onClick: Function,
     onClickClose: Function,
     children?: React.ReactNode,
-    id?: string,
 };
 
 const Dialog = (props: DialogProps) => {
@@ -22,6 +22,12 @@ const Dialog = (props: DialogProps) => {
         props.onClickClose();
     };
 
+    const handleClick = (): void => {
+        document.body.style.overflow = 'visible';
+        window.scrollTo(scrollX, scrollY);
+        props.onClick();
+    };
+
     useEffect(() => {
         setScrollY(window.scrollY);
         setScrollX(window.scrollX);
@@ -31,17 +37,19 @@ const Dialog = (props: DialogProps) => {
     return (
         <div className={styles.backGround}>
             <div className={styles.container}>
-                <div className={styles.topBar}>
+                {props.topBar && <div className={styles.topBar}>
                     <Paragraph size={16} weight='bold' color={'dark'} align={'left'}>
                         {props.topBar}
                     </Paragraph>
+                </div>}
+                <div className={styles.closeDialog}>
+                    <CloseDialog onClick={handleClickClose} />
                 </div>
-                <CloseDialog onClick={handleClickClose} />
                 <div className={styles.content}>
                     {props.children}
                 </div>
                 <div className={styles.buttons}>
-                    <Button text='Cerrar' onClick={handleClickClose}
+                    <DivButton text='Cerrar' onClick={handleClick}
                         width='auto' color='light' backgroundColor='safe' isSecondary={true}
                     />
                 </div>
