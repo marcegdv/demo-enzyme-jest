@@ -1,6 +1,6 @@
 # ENZYME + JEST - Ejemplos de tests para componentes hechos en ReactJS
 
-Este repositorio contiene algunos componentes simples que se utilizaron para una introducción a las características de Enzyme, para poder lograr una cobertura del 100% en los tests.
+El objetivo de este repositorio es mostrar la implementación básica de Enzyme. Contiene algunos componentes simples que se utilizaron para una introducción a las características de Enzyme, para poder lograr un buen porcentaje de cobertura en los tests.
 
 **Comandos en consola:**
 ``` npm run test ``` ejecuta todos los test de la aplicación.
