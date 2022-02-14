@@ -10,11 +10,8 @@ const props: DateCardProps = {
 const component: ShallowWrapper = shallow(<DateCard {...props}/>);
 
 describe('DateCard component', () => {
-    it('is rendered', () => {
-        expect(component).toBeTruthy();
-    });
     it('render five Paragraph components', () =>{
-        expect(component.find('Paragraph')).toHaveLength(5); //comentar cobertura
+        expect(component.find('Paragraph')).toHaveLength(5);
     });
     test('1st Paragraph is the month name', () => {
         expect(component.find('Paragraph').at(0).prop('children')).toEqual('Febrero');

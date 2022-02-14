@@ -1,7 +1,7 @@
 import React from 'react';
 import Paragraph from '../../Text/Paragraph';
 import styles from './DateCard.styles';
-import * as Utils from '../../../utilities/dateFunctions';
+import * as utils from '../../../utilities/dateFunctions';
 
 export type DateCardProps = {
     dateTime: Date;
@@ -10,10 +10,10 @@ export type DateCardProps = {
 const DateCard = (props: DateCardProps) => {
     
     const year: string = props.dateTime.getFullYear().toString();
-    const monthName: string = Utils.monthName(props.dateTime);
-    const dayName: string = Utils.dayName(props.dateTime);
+    const monthName: string = utils.monthName(props.dateTime);
+    const dayName: string = utils.dayName(props.dateTime);
     const dayOfMonth: string = props.dateTime.getDate().toString();
-    const timeOfDate: string = Utils.formatTimeHHMM(props.dateTime) + ' hs.';
+    const timeOfDate: string = utils.formatTimeHHMM(props.dateTime) + ' hs.';
 
     return (
         <div className={styles.container}>

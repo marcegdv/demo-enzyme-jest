@@ -27,12 +27,12 @@ describe('Home component:', () => {
         expect(component.find('Dialog')).toHaveLength(0);
         expect(component.find('DialogContent')).toHaveLength(0);
     });
-    test('if MainCards render it content', () => {
+    test('if MainCards render its content', () => {
         expect(component.find('MainCards').dive().find(TextCard)).toHaveLength(2);
-        const paragraphs: ShallowWrapper = component.find('MainCards').dive().find('Paragraph');
-        expect(paragraphs).toHaveLength(2);
-        expect(paragraphs.at(0).prop('color')).toEqual('danger');
-        expect(paragraphs.at(1).prop('color')).toEqual('warning');
+        const textCards = component.find('MainCards').dive().find(TextCard);
+        expect(textCards).toHaveLength(2);
+        expect(textCards.at(0).prop('color')).toEqual('danger');
+        expect(textCards.at(1).prop('color')).toEqual('warning');
     });
     it('when click on DivButton, render Dialog', () => {
         component.find('DivButton').simulate('click');

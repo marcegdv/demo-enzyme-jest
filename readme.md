@@ -16,7 +16,13 @@ Para testear los componentes, se utilizaron las funciónes:
 
 ## Tests:
 * Detección de que el componente recibe un click o se pulsó una tecla, y reacciona en consecuencia:
-    /components/Buttons/CloseDialog (código comentado)
+    /components/Buttons/CloseDialog
+    /components/Buttons/DivButton
+    /components/Buttons/LinkButton
+    /components/Buttons/TextButton
+* Verificación de que un componente renderizó sus subcomponentes con sus propiedades:
+    /components/Cards/TextCard
+    /components/Cards/DateCard
 * 
 
 ## Recomendación

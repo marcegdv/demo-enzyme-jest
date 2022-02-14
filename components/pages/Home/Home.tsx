@@ -21,16 +21,8 @@ const HomePage = () => {
     const MainCards = (): JSX.Element => {
         return (
             <>
-                <TextCard width='80%'>
-                    <Paragraph size={16} weight='bold' color={'danger'} align={'left'}>
-                        {stringLorem()}
-                    </Paragraph>
-                </TextCard>
-                <TextCard width='80%'>
-                    <Paragraph size={16} weight='bold' color={'warning'} align={'right'}>
-                        {stringLorem()}
-                    </Paragraph>
-                </TextCard>
+                <TextCard width='80%' size={16} weight='normal' color={'danger'} align={'left'} text={stringLorem()}/>
+                <TextCard width='80%' size={16} weight='bold' color={'warning'} align={'right'} text={stringLorem()}/>
             </>
         );
     };
