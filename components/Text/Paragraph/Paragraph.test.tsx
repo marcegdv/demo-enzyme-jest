@@ -7,9 +7,6 @@ describe('Paragraph component:', () => {
         children: 'Hello World!'
     };
     const component: ShallowWrapper = shallow(<Paragraph {...props}/>);
-    it('is rendered', () => {
-        expect(component).toBeTruthy;
-    });
     it('render with specified properties', () => {
         const val: ParagraphProps = {
             size: 10,

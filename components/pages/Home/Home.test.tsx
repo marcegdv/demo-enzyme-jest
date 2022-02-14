@@ -15,9 +15,6 @@ jest.mock('next/router', () => ({
 
 describe('Home component:', () => {
     const component: ShallowWrapper = shallow(<Home />);
-    it('is rendered', () => {
-        expect(component).toBeTruthy;
-    });
     it('render specific subcomponents', () => {
         expect(component.find('Nav')).toHaveLength(1);
         expect(component.find('Main')).toHaveLength(1);
