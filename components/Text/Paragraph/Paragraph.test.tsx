@@ -2,12 +2,14 @@ import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import Paragraph, { ParagraphProps } from './Paragraph';
 
+const props: ParagraphProps = {
+    children: 'Hello World!'
+};
+const component: ShallowWrapper = shallow(<Paragraph {...props}/>);
+
 describe('Paragraph component:', () => {
-    const props: ParagraphProps = {
-        children: 'Hello World!'
-    };
-    const component: ShallowWrapper = shallow(<Paragraph {...props}/>);
-    it('render with specified properties', () => {
+    it('render with the specified properties set', () => {
+        expect(component.prop('children')).toEqual(props.children);
         const val: ParagraphProps = {
             size: 10,
             weight: 'normal',

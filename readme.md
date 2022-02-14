@@ -25,6 +25,7 @@ Para testear los componentes, se utilizaron las funciónes:
     /components/Cards/DateCard
     /components/Containers/Footer
     /components/Containers/Main
+    /components/Text/Paragraph
 * Verificación de renderizado condicional:
     /components/Containers/Nav  por condición de @media query
     /components/Dialog  por condición de properties sin valor
