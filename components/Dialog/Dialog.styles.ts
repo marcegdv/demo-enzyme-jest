@@ -45,8 +45,7 @@ const styles = {
         cursor: 'normal',
         $nest: {
             '@media screen and (max-width: 767px)': {
-                width: '100%',
-                minWidth: 'fit-content',
+                width: 'calc(100% - 8px)',
             },
         },
     }),

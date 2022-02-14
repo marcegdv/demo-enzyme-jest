@@ -16,7 +16,8 @@ Para testear los componentes, se utilizaron las funciónes:
 
 ## Tests:
 
-* 
+* Si un componente tiene que ejecutar una función cuando se le hace click:
+    /components/Buttons/CloseDialog
 
 ## Recomendación
 

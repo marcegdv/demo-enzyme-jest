@@ -2,6 +2,8 @@ import React from 'react';
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
 import Home from '.';
 
+import TextCard from '../../Cards/TextCard';
+
 const mockRouter: jest.Mock = jest.fn();
 jest.mock('next/router', () => ({
     ...(jest.requireActual('next/router') as any),
@@ -24,6 +26,13 @@ describe('Home component:', () => {
         expect(component.find('Footer')).toHaveLength(1);
         expect(component.find('Dialog')).toHaveLength(0);
         expect(component.find('DialogContent')).toHaveLength(0);
+    });
+    test('if MainCards render it content', () => {
+        expect(component.find('MainCards').dive().find(TextCard)).toHaveLength(2);
+        const paragraphs: ShallowWrapper = component.find('MainCards').dive().find('Paragraph');
+        expect(paragraphs).toHaveLength(2);
+        expect(paragraphs.at(0).prop('color')).toEqual('danger');
+        expect(paragraphs.at(1).prop('color')).toEqual('warning');
     });
     it('when click on DivButton, render Dialog', () => {
         component.find('DivButton').simulate('click');

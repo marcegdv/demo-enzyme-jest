@@ -22,17 +22,12 @@ const HomePage = () => {
         return (
             <>
                 <TextCard width='80%'>
-                    <Paragraph size={16} weight='bold' color={'warning'} align={'left'}>
+                    <Paragraph size={16} weight='bold' color={'danger'} align={'left'}>
                         {stringLorem()}
                     </Paragraph>
                 </TextCard>
                 <TextCard width='80%'>
-                    <Paragraph size={16} weight='bold' color={'danger'} align={'right'}>
-                        {stringLorem()}
-                    </Paragraph>
-                </TextCard>
-                <TextCard width='80%'>
-                    <Paragraph size={16} weight='bold' color={'light'} align={'center'}>
+                    <Paragraph size={16} weight='bold' color={'warning'} align={'right'}>
                         {stringLorem()}
                     </Paragraph>
                 </TextCard>
