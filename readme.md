@@ -16,7 +16,7 @@ Para testear los componentes, se utilizaron las funciónes:
 
 ## Tests:
 
-* Si un componente tiene que ejecutar una función cuando se le hace click:
+* Detección de que el componente recibe un click o se pulsó una tecla:
     /components/Buttons/CloseDialog
 
 ## Recomendación

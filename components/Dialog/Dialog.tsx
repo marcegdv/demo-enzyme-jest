@@ -43,7 +43,7 @@ const Dialog = (props: DialogProps) => {
                     </Paragraph>
                 </div>}
                 <div className={styles.closeDialog}>
-                    <CloseDialog onClick={handleClickClose} />
+                    <CloseDialog onClick={handleClickClose} onKeyPress={handleClickClose} tabIndex={1}/>
                 </div>
                 <div className={styles.content}>
                     {props.children}
