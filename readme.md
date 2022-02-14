@@ -25,9 +25,13 @@ Para testear los componentes, se utilizaron las funciónes:
     /components/Cards/DateCard
     /components/Containers/Footer
     /components/Containers/Main
-* Verificación de renderizado condicional por condición de @media query:
-    /components/Containers/Nav
-* 
+* Verificación de renderizado condicional:
+    /components/Containers/Nav  por condición de @media query
+    /components/Dialog  por condición de properties sin valor
+* Verificación de funcionalidad de un subcomponente que se encuentra una capa mas profunda:
+    /components/pages/About
+* Verificación de funcionalidad de un componente y todos sus subcomponentes. Renderizado del DOM completo:
+    /components/pages/Home
 
 ## Recomendación
 
