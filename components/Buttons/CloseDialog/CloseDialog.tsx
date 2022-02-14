@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styles from './CloseDialog.styles';
-import { isEnter, isSpaceBar } from '../../../utilities/keyboardFunctions';
+import { buttonPress } from '../../../utilities/keyboardFunctions';
 
 export type CloseDialogProps = {
     onClick: Function;
@@ -11,10 +11,8 @@ export type CloseDialogProps = {
 const CloseDialog = (props: CloseDialogProps) => {
 
     const handleOnKeyPress = (e: React.KeyboardEvent<HTMLDivElement>) => {
-        if (props.onKeyPress) {
-            if ((isEnter(e) || isSpaceBar(e))) {
-                props.onKeyPress();
-            };
+        if (props.onKeyPress && buttonPress(e)) {
+            props.onKeyPress();
         };
     };
 

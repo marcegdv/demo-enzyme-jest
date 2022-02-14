@@ -1,6 +1,6 @@
 # ENZYME + JEST - Ejemplos de tests para componentes hechos en ReactJS
 
-Este repositorio contiene algunos componentes simples que se utilizaron para explicar algunas características de Enzyme. Continuando con los ejemplos del repositorio sobre Jest.
+Este repositorio contiene algunos componentes simples que se utilizaron para una introducción a las características de Enzyme, para poder lograr una cobertura del 100% en los tests.
 
 **Comandos en consola:**
 ``` npm run test ``` ejecuta todos los test de la aplicación.
@@ -15,9 +15,9 @@ Para testear los componentes, se utilizaron las funciónes:
 ```mount()```, que retorna una instancia del componente *completa*. Por lo que con esa sola instancia se podrá testear la funcionalidad del componente principal y sus subcomponentes.
 
 ## Tests:
-
-* Detección de que el componente recibe un click o se pulsó una tecla:
-    /components/Buttons/CloseDialog
+* Detección de que el componente recibe un click o se pulsó una tecla, y reacciona en consecuencia:
+    /components/Buttons/CloseDialog (código comentado)
+* 
 
 ## Recomendación
 
@@ -30,7 +30,6 @@ Extensión para Visual Studio Code:
 Luego de instalar la extensión, aparecerá la opción **Run** con la que podrás focalizar la ejecución de tests:
 
 ![image](https://raw.githubusercontent.com/marcegdv/demo-jest/master/jestRunnerRunOption.jpg)
-
 
 ## Links útiles
 Enzyme: https://enzymejs.github.io/enzyme/

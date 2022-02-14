@@ -2,27 +2,38 @@ import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import DivButton, { DivButtonProps } from './DivButton';
 
-//comentar
-const mockOnClick = jest.fn();
+const mockFunction = jest.fn();
+
 const buttonText = 'Text button';
 const props: DivButtonProps = {
     text: buttonText,
-    onClick: mockOnClick,
+    onClick: mockFunction,
 };
 
 const component: ShallowWrapper = shallow(<DivButton {...props}/>);
 
 describe('DivButton component', () => {
     beforeEach(() => {
-        mockOnClick.mockReset();
-    });
-    it('is rendered', () => {
-        expect(component).toBeTruthy();
+        mockFunction.mockReset();
     });
     test('on click, call function', () => {
-        component.simulate('mouseover');
+        expect(mockFunction).toBeCalledTimes(0);
         component.simulate('click');
-        expect(mockOnClick).toBeCalled();
-        expect(mockOnClick).toBeCalledTimes(1);
+        expect(mockFunction).toBeCalled();
+        expect(mockFunction).toBeCalledTimes(1);
+    });
+    test('on Enter key press, call function', () => {
+        component.setProps({onKeyPress: mockFunction});
+        expect(mockFunction).toBeCalledTimes(0);
+        component.simulate('keypress', { key: 'Enter' });
+        expect(mockFunction).toBeCalled();
+        expect(mockFunction).toBeCalledTimes(1);
+    });
+    test('on SpaceBar key press, call function', () => {
+        component.setProps({onKeyPress: mockFunction});
+        expect(mockFunction).toBeCalledTimes(0);
+        component.simulate('keypress', { key: ' ' });
+        expect(mockFunction).toBeCalled();
+        expect(mockFunction).toBeCalledTimes(1);
     });
 });

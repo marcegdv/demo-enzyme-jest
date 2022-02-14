@@ -49,7 +49,7 @@ describe('When dialog is open:', () => {
         expect(content.find('Paragraph')).toHaveLength(2);
         expect(content.find('LinkButton')).toHaveLength(1);
     });
-    test('when click on UrlButton, go to /contact', () => {
+    test('when click on LinkButton, go to /contact', () => {
         mockRouter.mockReset();
         content.find('LinkButton').simulate('click');
         expect(mockRouter).toHaveBeenCalledWith('/about');
