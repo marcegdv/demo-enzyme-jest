@@ -29,7 +29,7 @@ Para testear los componentes, se utilizaron las funciónes:
 * Verificación de renderizado condicional:
     * /components/Containers/Nav  por condición de @media query
     * /components/Dialog  por condición de properties sin valor
-* Verificación de funcionalidad de un subcomponente que se encuentra una capa mas profunda:
+* Verificación de funcionalidad de un subcomponente que se encuentra en el siguiente nivel en el DOM:
     * /components/pages/About
 * Verificación de funcionalidad de un componente y todos sus subcomponentes. Renderizado del DOM completo:
     * /components/pages/Home
