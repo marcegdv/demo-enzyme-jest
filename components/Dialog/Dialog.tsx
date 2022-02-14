@@ -49,8 +49,8 @@ const Dialog = (props: DialogProps) => {
                     {props.children}
                 </div>
                 <div className={styles.buttons}>
-                    <DivButton text='Cerrar' onClick={handleClick}
-                        width='auto' color='light' backgroundColor='safe' isSecondary={true}
+                    <DivButton text='Cerrar' onClick={handleClick} onKeyPress={handleClick}
+                        width='auto' color='light' backgroundColor='safe' isSecondary={true} tabIndex={99}
                     />
                 </div>
             </div>

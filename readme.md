@@ -23,6 +23,10 @@ Para testear los componentes, se utilizaron las funciónes:
 * Verificación de que un componente renderizó sus subcomponentes con sus propiedades:
     /components/Cards/TextCard
     /components/Cards/DateCard
+    /components/Containers/Footer
+    /components/Containers/Main
+* Verificación de renderizado condicional por condición de @media query:
+    /components/Containers/Nav
 * 
 
 ## Recomendación

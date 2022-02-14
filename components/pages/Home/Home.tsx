@@ -48,8 +48,9 @@ const HomePage = () => {
             <Main>
                 <div className={styles.main_content}>
                     <MainCards />
-                    <DivButton text='Abrir diálogo' height='48px' onClick={handleSwitchShowDialog}
-                        width='200px' color='light' backgroundColor='safe' />
+                    <DivButton text='Abrir diálogo' height='48px'
+                        onClick={handleSwitchShowDialog}
+                        width='200px' color='light' backgroundColor='safe' tabIndex={1} />
                 </div>
             </Main>
             <Footer />
