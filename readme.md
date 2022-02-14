@@ -16,7 +16,7 @@ Para testear los componentes, se utilizaron las funciónes:
 
 ## Tests:
 * Detección de que el componente recibe un click o se pulsó una tecla, y reacciona en consecuencia:
-    * /components/Buttons/CloseDialog
+    * [/components/Buttons/CloseDialog](https://github.com/marcegdv/demo-enzyme/tree/master/components/Buttons/CloseDialog)
     * /components/Buttons/DivButton
     * /components/Buttons/LinkButton
     * /components/Buttons/TextButton
