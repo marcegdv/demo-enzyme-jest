@@ -13,9 +13,6 @@ jest.mock('next/router', () => ({
 const component: ShallowWrapper = shallow(<About />);
 
 describe('About component', () => {
-    it('is rendered', () => {
-        expect(component).toBeTruthy;
-    });
     it('render specific subcomponents', () => {
         expect(component.find('Nav')).toHaveLength(1);
         expect(component.find('Main')).toHaveLength(1);
@@ -41,7 +38,10 @@ describe('About component', () => {
         expect(component.find('DateCard')).toHaveLength(0);
     });
     test('if click on button "Volver" go to home page', () => {
-        component.find('LinkButton').dive().simulate('click');  //comentar
+        /* Para acceder a la funcionalidad componente <LinkButton/>
+           hay que hacer el renderizado de éste, ya que por no estar
+           en el DOM del componente <About/>, hay que renderizarlo */
+        component.find('LinkButton').dive().simulate('click');
         expect(mockRouter).toHaveBeenCalledWith('/');
     });
 });
