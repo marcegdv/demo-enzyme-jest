@@ -16,23 +16,23 @@ Para testear los componentes, se utilizaron las funciónes:
 
 ## Tests:
 * Detección de que el componente recibe un click o se pulsó una tecla, y reacciona en consecuencia:
-    /components/Buttons/CloseDialog
-    /components/Buttons/DivButton
-    /components/Buttons/LinkButton
-    /components/Buttons/TextButton
+    * /components/Buttons/CloseDialog
+    * /components/Buttons/DivButton
+    * /components/Buttons/LinkButton
+    * /components/Buttons/TextButton
 * Verificación de que un componente renderizó sus subcomponentes con sus propiedades:
-    /components/Cards/TextCard
-    /components/Cards/DateCard
-    /components/Containers/Footer
-    /components/Containers/Main
-    /components/Text/Paragraph
+    * /components/Cards/TextCard
+    * /components/Cards/DateCard
+    * /components/Containers/Footer
+    * /components/Containers/Main
+    * /components/Text/Paragraph
 * Verificación de renderizado condicional:
-    /components/Containers/Nav  por condición de @media query
-    /components/Dialog  por condición de properties sin valor
+    * /components/Containers/Nav  por condición de @media query
+    * /components/Dialog  por condición de properties sin valor
 * Verificación de funcionalidad de un subcomponente que se encuentra una capa mas profunda:
-    /components/pages/About
+    * /components/pages/About
 * Verificación de funcionalidad de un componente y todos sus subcomponentes. Renderizado del DOM completo:
-    /components/pages/Home
+    * /components/pages/Home
 
 ## Recomendación
 
@@ -47,5 +47,5 @@ Luego de instalar la extensión, aparecerá la opción **Run** con la que podrá
 ![image](https://raw.githubusercontent.com/marcegdv/demo-jest/master/jestRunnerRunOption.jpg)
 
 ## Links útiles
-Enzyme: https://enzymejs.github.io/enzyme/
-Jest: https://jestjs.io/
+* Enzyme: https://enzymejs.github.io/enzyme/
+* Jest: https://jestjs.io/
